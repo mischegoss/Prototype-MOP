@@ -1,4 +1,4 @@
-// Array of possible choices
+// Array of possible choices; Shows planner for use "Git" and "git"
 var reviewSections = ["Git", "git", "HTML", "html", "CSS", "Javascript", "JavaScript"]
 
 // Need function declaration 
@@ -10,9 +10,9 @@ function sectionPicker() {
     for (var x =0; x < reviewSections.length; x++) {
         // Array index
         if (selectedSection === reviewSections[x]) {
-          // Shows Zero indexing of arrays
+          // Reinforces zero indexing of arrays
           if (x <=1) {
-            // Shows calling function with parameter
+            // Shows calling function with parameter; Function provided
              highlightSection("git")
              // Shows return use case
              return
@@ -27,11 +27,9 @@ function sectionPicker() {
     sectionPicker();
 }
 
-// This is the helper function. Provided for students
-
+// This is the helper function. PROVIDED for students
 function highlightSection(target) {
-    // This can be provided code (of course it will need cleaned up)
-    highlighted = document.getElementById(target);
+    var highlighted = document.getElementById(target);
      // This is just a bonus to show JavaScript is awesome
     highlighted.scrollIntoView();
     // Changes color
