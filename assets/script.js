@@ -1,11 +1,15 @@
 // Array of possible choices; Shows planner for use "Git" and "git"
 var reviewSections = ["Git", "git", "HTML", "html", "CSS", "Javascript", "JavaScript"]
 
+// Shows variable can get value later
+var highlighted;
+
+
 // Need function declaration 
 function sectionPicker() {
   
     // Need window prompt
-    var  selectedSection = prompt("What section would you like to review: Git, HTML, CSS, JavaScript");
+    var selectedSection = prompt("What section would you like to review: Git, HTML, CSS, JavaScript");
     // Need for loop
     for (var x =0; x < reviewSections.length; x++) {
         // Array index
@@ -29,7 +33,7 @@ function sectionPicker() {
 
 // This is the helper function. PROVIDED for students
 function highlightSection(target) {
-    var highlighted = document.getElementById(target);
+    highlighted = document.getElementById(target);
      // This is just a bonus to show JavaScript is awesome
     highlighted.scrollIntoView();
     // Changes color
