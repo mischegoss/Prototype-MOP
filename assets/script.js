@@ -1,23 +1,65 @@
-// Need array and variable
-var colorChoices = ["Red", "red", "Blue", "blue", "Yellow", "yellow", "Green", "green"]
+// Array of possible choices
+var reviewSections = ["Git", "git", "HTML", "html", "CSS", "Javascript", "JavaScript"]
 
 // Need function declaration 
-function colorPicker() {
+function sectionPicker() {
+  
     // Need window prompt
-    var color = prompt("Pick a background color: Red, Blue, Yellow or Green")
+    var  selectedSection = prompt("What section would you like to review: Git, HTML, CSS, JavaScript");
     // Need for loop
-    for (var x =0; x < colorChoices.length; x++) {
-        if (color === colorChoices[x]) {
-          // Need Style Background Property
-          document.body.style.background = color;
-          return;
+    for (var x =0; x < reviewSections.length; x++) {
+        // Array index
+        if (selectedSection === reviewSections[x]) {
+          // Shows Zero indexing of arrays
+          if (x <=1) {
+            // Shows calling function with parameter
+             highlightSection("git")
+             // Shows return use case
+             return
+          }
+          // TODO: Other conditions using helper function
         }
-      }
+    }
     // Need window alert
-    alert("That is not a valid color choice");
-    // This may be a bad idea calling the function inside the function at this point
-    colorPicker();
+    // Shows need for error messaging
+    alert("Oh no, try again");
+    // Shows calling function in function; Can be eliminated if out of scope
+    sectionPicker();
+}
+
+// This is the helper function. Provided for students
+
+function highlightSection(target) {
+    // This can be provided code (of course it will need cleaned up)
+    highlighted = document.getElementById(target);
+     // This is just a bonus to show JavaScript is awesome
+    highlighted.scrollIntoView();
+    // Changes color
+    highlighted.style.backgroundColor = "yellow";
 }
 
 // Calling function
-colorPicker();
+sectionPicker();
+
+
+/************************************Skills Covered ****************************/
+/* Skills used
+ * Array
+ * Array Zero Index
+ * For Loop
+ * If/Else
+ * Declaring a Function
+ * Calling a Function
+ * Declaring variable with var
+ * Window alerts and prompts
+ * return
+ */
+
+/* Skills that are shown PROVIDED)
+ * document.getElementbyId()
+ * Style property
+ * scrollintoView()
+ */
+/********************************************************************************** */
+
+

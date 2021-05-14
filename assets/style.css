@@ -1,0 +1,17 @@
+h1 {
+ 
+}
+
+header, 
+footer  {
+  width: 100%;
+  height: 80px;
+  background-color: navy;
+  color: white;
+}
+
+article {
+  font: 20px;
+  color: blue;
+  border-bottom: 10px dotted blue;
+}
