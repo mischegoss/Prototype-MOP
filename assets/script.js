@@ -1,14 +1,13 @@
-// Array of possible choices; Shows planner for use "Git" and "git"
+// Array of possible choices; Shows planning for use "Git" and "git" w/o introducing string methods
 var reviewSections = ["Git", "git", "HTML", "html", "CSS", "Javascript", "JavaScript"]
 
 // Shows variable can get value later
 var highlighted;
 
-
-// Need function declaration 
+// function declaration 
 function sectionPicker() {
   
-    // Need window prompt
+    // Window prompts. Needed to demo interactivity 
     var selectedSection = prompt("What section would you like to review: Git, HTML, CSS, JavaScript");
     // Need for loop
     for (var x =0; x < reviewSections.length; x++) {
@@ -17,14 +16,13 @@ function sectionPicker() {
           // Reinforces zero indexing of arrays
           if (x <=1) {
             // Shows calling function with parameter; Function provided
-             highlightSection("git")
+             highlightSection("git-section")
              // Shows return use case
              return
-          }
-          // TODO: Other conditions using helper function
+          } 
         }
     }
-    // Need window alert
+
     // Shows need for error messaging
     alert("Oh no, try again");
     // Shows calling function in function; Can be eliminated if out of scope
