@@ -33,7 +33,7 @@ function sectionPicker() {
 function highlightSection(target) {
     highlighted = document.getElementById(target);
      // This is just a bonus to show JavaScript is awesome
-    highlighted.scrollIntoView();
+    highlighted.scrollIntoView({behavior: "smooth"});
     // Changes color
     highlighted.style.backgroundColor = "yellow";
 }
