@@ -6,7 +6,7 @@ var searchTopic;
 /*Key Topic: Functions */
 function topicChecker() {
 /* Worth Knowing: Window Functions */
-searchTopic = prompt("What topic would you like use to search for? For testing use Git or HTML")
+searchTopic = prompt("What topic would you like use to search for (ex. variables or selectors? For testing use Git or HTML")
 /* Key Topic: for Loop) */
 for (var x=0; x< topics.length; x++) {
   if (searchTopic === topics[x]) {
