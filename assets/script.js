@@ -11,13 +11,11 @@ searchTopic = prompt("What topic would you like use to search for? For testing u
 for (var x=0; x< topics.length; x++) {
   if (searchTopic === topics[x]) {
     selectSection()
-    /* Worth Knowing: return usage */
-    return;
-  } else {
-    alert("Topic is not covered")
-    return;
+    return
   }
- }
+} 
+  alert("Topic is not covered")
+  return;
 }
 
 function selectSection() {
@@ -27,19 +25,19 @@ function selectSection() {
       return;
      
     // TODO: These need to be expanded to include topics in array
-    } else if (selectionPrompt === "HTML" || selectionPrompt === "Semantic HTML") {
+    } else if (searchTopic === "HTML" || searchTopic === "Semantic HTML") {
         highlightSection("html-section");
         return;
 
-    } else if (selectionPrompt === "CSS") {
+    } else if (searchTopic === "CSS") {
         highlightSection("css-section");
         return;
 
-    } else if (selectionPrompt === "JavaScript") {
+    } else if (searchTopic === "JavaScript") {
         highlightSection("javascript-section");
         return;
 
-    } else if (selectionPrompt === "Deployment") {
+    } else if (searchTopic === "Deployment") {
         highlightSection("deployment-section");
         return;
     /* Worth Knowing: Error Handling intro */
